@@ -1,0 +1,27 @@
+### Explanation of Each Function and Hook:
+
+1. `add` Function:
+   - Purpose: Adds a new todo item to the list.
+   - Details:
+     - Retrieves the input value, trims any extra whitespace, and creates a new todo object.
+     - Updates the state by appending the new todo item.
+     - Clears the input field after adding the new item.
+
+2. `deleteTodo` Function:
+   - Purpose: Removes a todo item from the list based on its ID.
+   - Details:
+     - Filters the todo list to exclude the item with the matching ID and updates the state.
+
+3. `toggle` Function:
+   - Purpose: Toggles the completion status of a todo item.
+   - Details:
+     - Maps through the todo list and toggles the `isComplete` property of the item with the matching ID.
+
+4. `useEffect` Hook:
+   - Purpose: Synchronizes the `todoList` state with `localStorage`.
+   - Details:
+     - Updates `localStorage` with the latest todo list whenever the `todoList` state changes.
+     - Logs the updated `todoList` to the console for debugging.
+
+This component effectively manages a to-do list, allowing users to add, delete, and toggle tasks while persisting 
+the list in `localStorage` to ensure data durability across page reloads.
